@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table to PDF</title>
+    <!-- link for coversion to pdf  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- link for conversion to excel  -->
+
+    <!-- Include jQuery library (required by table2excel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include table2excel library -->
+<script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #tableToConvert {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #tableToConvert th,
+        #tableToConvert td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #tableToConvert th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        #tableToConvert tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #downloadButton,
+        #export-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #downloadButton:hover,
+        #export-button:hover {
+            background-color: #555;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>File Conversion to pdf and excel</h1>
+    
+    <table id="tableToConvert">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="downloadButton">Download as PDF</button>
+
+    <button id="export-button">Download as Excel</button>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
